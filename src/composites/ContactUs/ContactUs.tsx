@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { ChevronRightIcon } from "@heroicons/react/24/solid"
 import React from "react"
 

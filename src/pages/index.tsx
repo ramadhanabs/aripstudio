@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Container from "@/components/elements/Container"
 import ContactUs from "@/composites/ContactUs/ContactUs"
 import FAQ from "@/composites/FAQ/FAQ"
