@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Container from "@/components/elements/Container"
 import { Menu } from "@headlessui/react"
 import { Bars2Icon } from "@heroicons/react/24/solid"
