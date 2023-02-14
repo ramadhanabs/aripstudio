@@ -45,11 +45,11 @@ const DATA = [
 const FAQ = () => {
   return (
     <Container className="mb-[200px] text-white md:max-w-7xl">
-      <p className="text-[80px] leading-none font-bold tracking-tight mb-4">
+      <p className="text-[48px] md:text-[80px] leading-none font-bold tracking-tight mb-4">
         What's your <br />
         <span className="text-primary">interest?</span>
       </p>
-      <p className="text-[22px] font-thin">Do you have a question you want to ask?</p>
+      <p className="text-[18px] md:text-[22px] font-thin">Do you have a question you want to ask?</p>
 
       <section className="my-10">
         {DATA.map((item) => (
@@ -60,7 +60,7 @@ const FAQ = () => {
                   as={"div"}
                   className="flex justify-between items-center cursor-pointer"
                 >
-                  <p className="text-[36px] font-semibold tracking-tight">{item.question}</p>
+                  <p className="text-[24px] md:text-[36px] font-semibold tracking-tight">{item.question}</p>
                   <motion.img
                     src="/icons/arrow-right.svg"
                     alt="arrow-right"
@@ -70,8 +70,8 @@ const FAQ = () => {
                     }}
                   />
                 </Disclosure.Button>
-                <Disclosure.Panel as={"div"} className="w-3/4">
-                  <p className="text-[20px] font-thin opacity-90">{item.answer}</p>
+                <Disclosure.Panel as={"div"} className="md:w-3/4 pt-4">
+                  <p className="md:text-[20px] font-thin opacity-90">{item.answer}</p>
                 </Disclosure.Panel>
               </>
             )}

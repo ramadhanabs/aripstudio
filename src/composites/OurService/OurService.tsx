@@ -48,7 +48,7 @@ const OurService = () => {
   return (
     <Container className="mt-[600px] mb-[200px] text-white md:max-w-7xl">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-        <div className="relative">
+        <div className="hidden md:block relative">
           <p className="text-[80px] font-semibold leading-tight tracking-tighter">
             The services
             <br />
@@ -66,8 +66,11 @@ const OurService = () => {
             </div>
           </div>
         </div>
-        <div className="w-[80%]">
-          <p className="text-[22px] font-thin mt-5 lg:mt-0">
+        <p className="block md:hidden text-[48px] font-bold">
+          Our <strong className="text-primary">Services</strong>
+        </p>
+        <div className="md:w-[80%]">
+          <p className="text-lg md:text-[22px] font-thin mt-5 lg:mt-0">
             The focus of the service we provide is more on UI animated illustration websites. But we
             are not limited to that, because there are other services.
           </p>
@@ -76,15 +79,18 @@ const OurService = () => {
 
       <section className="my-10">
         {DATA.map((item) => (
-          <Disclosure as={"div"} className="py-8 border-b border-b-white/60" key={item.id}>
+          <Disclosure as={"div"} className="py-4 md:py-8 border-b border-b-white/60" key={item.id}>
             {({ open }) => (
               <>
-                <Disclosure.Button as={"div"} className="flex justify-between items-center cursor-pointer">
-                  <p className="text-[64px] font-semibold">{item.name}</p>
+                <Disclosure.Button
+                  as={"div"}
+                  className="flex justify-between items-center cursor-pointer"
+                >
+                  <p className="text-[24px] md:text-[64px] font-semibold">{item.name}</p>
                   <motion.img
                     src="/icons/arrow-right.svg"
                     alt="arrow-right"
-                    className="w-[58px]"
+                    className="w-[30px] md:w-[58px]"
                     animate={{
                       rotate: open ? 90 : 0,
                     }}
@@ -93,7 +99,7 @@ const OurService = () => {
                 <Disclosure.Panel as={"div"} className="flex flex-wrap items-center gap-4 mt-5">
                   {item.services.map((service) => (
                     <span
-                      className="flex justify-center items-center border rounded-full py-1 px-8 text-[22px] cursor-default hover:bg-primary hover:text-black hover:border-transparent ease-in-out duration-200 font-thin"
+                      className="flex justify-center items-center border rounded-full py-1 px-4 md:px-8 md:text-[22px] cursor-default hover:bg-primary hover:text-black hover:border-transparent ease-in-out duration-200 font-thin"
                       key={service}
                     >
                       {service}

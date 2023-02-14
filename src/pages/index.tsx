@@ -12,6 +12,8 @@ import Head from "next/head"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { MapPinIcon, EnvelopeIcon, Bars2Icon } from "@heroicons/react/24/solid"
+import Footer from "@/composites/Footer/Footer"
+import Header from "@/composites/Header/Header"
 
 export default function Home() {
   const scrollPosition = useScroll()
@@ -31,44 +33,11 @@ export default function Home() {
       </Head>
 
       {/* Header */}
-      <nav className="text-white fixed w-full top-0 left-0 z-50 bg-black">
-        {/* Desktop */}
-        <Container className="items-center justify-between md:py-4 hidden md:flex">
-          <img src="/logo.svg" alt="logo-aripstudio" />
-          <div className="flex items-center gap-5">
-            <Link href="/">
-              <p className="font-thin text-sm">Why Us</p>
-            </Link>
-            <Link href="/">
-              <p className="font-thin text-sm">Services</p>
-            </Link>
-            <Link href="/">
-              <p className="font-thin text-sm">Our Process</p>
-            </Link>
-            <Link href="/">
-              <p className="font-thin text-sm">Portfolios</p>
-            </Link>
-            <Link href="/">
-              <p className="font-thin text-sm">FAQs</p>
-            </Link>
-          </div>
-          <button className="bg-primary text-black px-4 py-3 rounded-full font-semibold">
-            Let's Talk
-          </button>
-        </Container>
-
-        {/* Mobile */}
-        <Container className="flex md:hidden items-center justify-between py-4 mx-0">
-          <img src="/logo.svg" alt="logo-aripstudio" className="w-[120px]" />
-          <button className="border rounded-lg p-2">
-            <Bars2Icon className="w-4 h-4" />
-          </button>
-        </Container>
-      </nav>
+      <Header />
 
       {/* Hero Section */}
       <Container className="mt-[80px]">
-        <section className="pt-[60px] pb-[100px]">
+        <section className="py-0 sm:pt-[60px] sm:pb-[100px]">
           <div className="h-[650px] flex items-center">
             <div className="relative">
               <h1 className="text-[52px] md:text-[136px] font-medium leading-none text-white w-[90%] relative z-10">
@@ -77,11 +46,11 @@ export default function Home() {
               </h1>
               <img
                 src="/images/highlighter.svg"
-                className="absolute bottom-[50px] right-[220px] w-[750px]"
+                className="hidden sm:block absolute bottom-[50px] right-[220px] w-[750px]"
               />
               <div className="relative pt-10">
                 <hr className="mb-10" />
-                <div className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] bg-primary rounded-full absolute right-14 top-[-40px] flex items-center justify-center">
+                <div className="hidden w-[80px] h-[80px] md:w-[160px] md:h-[160px] bg-primary rounded-full absolute right-14 top-[-40px] sm:flex items-center justify-center">
                   <img
                     src="/images/best-visual-service.svg"
                     className="ease-linear duration-100"
@@ -89,7 +58,7 @@ export default function Home() {
                     style={{ transform: `rotate(${degree}deg)` }}
                   />
                 </div>
-                <p className="text-white text-[32px] font-thin">
+                <p className="text-white text-lg sm:text-[32px] font-thin leading-tight">
                   We are Design Agency Specialized in Illustrations, UI/UX Design <br />
                   and Motion Graphic Based in Yogyakarta, Indonesia
                 </p>
@@ -107,62 +76,7 @@ export default function Home() {
       <ContactUs />
 
       {/* Footer */}
-      <footer>
-        <Container>
-          <div className="border-y flex flex-col gap-8 py-10">
-            <div className="grid grid-cols-2 text-white">
-              <div>
-                <img src="/logo.svg" alt="logo-aripstudio" />
-                <p className="mt-4 text-[24px] font-thin">
-                  Design Agency Specialized in Illustrations,
-                  <br />
-                  UI/UX Design and Motion Graphic
-                </p>
-              </div>
-              <div className="grid grid-cols-3">
-                <div>
-                  <p className="font-bold text-[24px] mb-6">Navigations</p>
-                  <p className="font-thin text-[20px] mb-2">Home</p>
-                  <p className="font-thin text-[20px] mb-2">Why Us</p>
-                  <p className="font-thin text-[20px] mb-2">Services</p>
-                  <p className="font-thin text-[20px] mb-2">Our Process</p>
-                  <p className="font-thin text-[20px] mb-2">Portfolios</p>
-                  <p className="font-thin text-[20px] mb-2">FAQs</p>
-                </div>
-                <div>
-                  <p className="font-bold text-[24px] mb-6">Services</p>
-                  <p className="font-thin text-[20px] mb-2">Brand Identity</p>
-                  <p className="font-thin text-[20px] mb-2">Visual Design</p>
-                  <p className="font-thin text-[20px] mb-2">Development</p>
-                </div>
-                <div>
-                  <p className="font-bold text-[24px] mb-6">Services</p>
-                  <p className="font-thin text-[20px] mb-2">Behance</p>
-                  <p className="font-thin text-[20px] mb-2">Instagram</p>
-                  <p className="font-thin text-[20px] mb-2">Twitter</p>
-                </div>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 text-white">
-              <div className="flex items-center">
-                <MapPinIcon className="text-primary w-6 h-6 mr-2" />
-                <p className="font-thin text-[24px]">Yogyakarta City. Indonesia.</p>
-              </div>
-              <div className="flex items-center">
-                <EnvelopeIcon className="text-primary w-6 h-6 mr-2" />
-                <p className="font-thin text-[24px]">achmadaarifty@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          <div className="py-8 flex items-center justify-between text-white">
-            <p className="text-[20px] font-thin">© 2023 Aripstudio.</p>
-            <div className="flex items-center gap-6">
-              <p className="text-[20px] font-thin">Terms and Conditions</p>
-              <p className="text-[20px] font-thin">Privacy Policy</p>
-            </div>
-          </div>
-        </Container>
-      </footer>
+      <Footer />
     </>
   )
 }

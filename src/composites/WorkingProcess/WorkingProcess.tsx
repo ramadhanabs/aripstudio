@@ -63,7 +63,7 @@ const WorkingProcess = () => {
   return (
     <Container className="my-[80px] text-white md:max-w-7xl">
       <div className="mb-[100px]">
-        <div className="grid grid-cols-2 items-center gap-6">
+        <div className="hidden md:grid grid-cols-2 items-center gap-6">
           <p className="text-[80px] font-semibold leading-tight tracking-tighter text-right">
             Working
           </p>
@@ -76,7 +76,10 @@ const WorkingProcess = () => {
             </div>
           </div>
         </div>
-        <p className="text-center text-[22px] font-thin">
+        <p className="block md:hidden text-[48px] text-center font-bold leading-none mb-4">
+          Working <strong className="text-primary">Process</strong>
+        </p>
+        <p className="text-center text-lg md:text-[22px] font-thin">
           A well-structured workflow with great design execution.
         </p>
       </div>
@@ -95,7 +98,7 @@ const WorkingProcess = () => {
               <p className="font-thin">{item.description}</p>
             </div>
             <div className="flex justify-end mt-4">
-                <UnionIllustration />
+              <UnionIllustration />
             </div>
           </motion.div>
         ))}

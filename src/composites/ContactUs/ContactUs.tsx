@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
+import Container from "@/components/elements/Container"
 import { ChevronRightIcon } from "@heroicons/react/24/solid"
 import React from "react"
 
 const ContactUs = () => {
   return (
-    <section className="mt-[200px] mb-[300px] flex flex-col items-center">
-      <p className="text-[120px] text-white font-semibold text-center leading-none">
+    <Container className="mt-[200px] mb-[300px] flex flex-col items-center">
+      <p className="text-[48px] md:text-[120px] text-white font-semibold text-center leading-none">
         Want to work <br />
         with us?
       </p>
@@ -15,7 +16,7 @@ const ContactUs = () => {
           <ChevronRightIcon className="w-4 h-4 text-primary" />
         </span>
       </button>
-    </section>
+    </Container>
   )
 }
 
